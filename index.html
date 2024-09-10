@@ -18,53 +18,56 @@
 
 <body>
   <header>
-
-    <menu class="menu">
-      <li class="menu__item menu__item--accent"><a href="index.html">o firmie</a></li>
-      <li class="menu__item"><a href="">oferta</a></li>
-      <li class="menu__item"><a href="">projekty</a></li>
-      <li class="menu__item"><a href="">kontakt</a></li>
-    </menu>
-
+    <div class="container header-container">
+      <a href="#main-page" class="logo">
+        <h4 class="logo">Engawa</h4>
+        <menu class="menu">
+          <li class="menu__item menu__item--accent"><a href="#main-page">strona<br>główna</a></li>
+          <li class="menu__item"><a href="#investor">inwestor<br>zastępczy</a></li>
+          <li class="menu__item"><a href="#manager">project<br>manager</a></li>
+          <li class="menu__item"><a href="#design-office">biuro<br>projektowe</a></li>
+          <li class="menu__item"><a href="#realisations">realizacje<br>projekty</a></li>
+          <li class="menu__item"><a href="#about">o nas</a></li>
+          <li class="menu__item"><a href="#contact">kontakt</a></li>
+        </menu>
+        <button class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="24" height="16">
+            <use href="images/menu.svg#icon-menu"></use>
+          </svg>
+        </button>
+    </div>
 
   </header>
-  <section>
+  <section id="main-page">
     <div class="container">
 
     </div>
   </section>
   <footer>
     <div class="container footer-container">
-      <p class="copyrights">&#169; 2023 - SARTR PROJEKT. All Rights Reserved.</p>
+      <p class="copyrights">&#169; 2024 - Engawa. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-    <svg class="menu-toggle__icon" width="24" height="16">
-      <use href="images/menu.svg#icon-menu"></use>
-    </svg>
-  </button>
+
   <div class="mobil-menu js-menu-container" id="mobile-menu">
-    <button class="mobil-menu__menu-toggle js-close-menu">
-      <svg class="mobil-menu__menu-toggle-icon" width="18.67" height="18.67">
+    <button class="mobil-menu__menu-close js-close-menu">
+      <svg class="mobil-menu__menu-close-icon" width="18.67" height="18.67">
         <use href="images/clouse.svg#icon-close"></use>
       </svg>
     </button>
-    <menu class="mobile-nav">
-      <li>
-        <a class="mobile-nav__link mobile-nav__link--accent" href="index.html">o firmie</a>
-      </li>
-      <li>
-        <a class="mobile-nav__link" href="offer.html">oferta</a>
-      </li>
-      <li>
-        <a class="mobile-nav__link" href="projects.html">projekty</a>
-      </li>
-      <li>
-        <a class="mobile-nav__link" href="contact.html">kontakt</a>
-      </li>
-    </menu>
 
+    <menu class="mobile-nav">
+      <li class="mobile-nav__link mobile-nav__link--accent"><a href="#main-page">strona główna</a></li>
+      <li class="mobile-nav__link">
+        <a href="#investor">inwestor zastępczy</a>
+      </li>
+      <li class="mobile-nav__link"><a href="#manager">project manager</a></li>
+      <li class="mobile-nav__link"><a href="#design-office">biuro projektowe</a></li>
+      <li class="mobile-nav__link"><a href="#realisations">realizacje projekty</a></li>
+      <li class="mobile-nav__link"><a href="#about">o nas</a></li>
+      <li class="mobile-nav__link"><a href="#contact">kontakt</a></li>
+    </menu>
   </div>
 
   <script defer src="./js/mobile-menu.js"></script>

@@ -1,23 +1,18 @@
-.logo {
-    display: block;
-    width: 150px;
-    margin: 0 auto;
-    margin-top: 10px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.logo {}
 
 .menu {
     display: none;
 }
 
-hr {
-    display: none;
-}
 
-.menu-toggle {
-    z-index: 10;
-    position: fixed;
-    top: 12px;
-    right: 20px;
+
+.menu-open {
     background-color: transparent;
     border: none;
 
@@ -26,27 +21,18 @@ hr {
     }
 }
 
-@media #{$tabletDesktop} {
-    .logo {
-        display: block;
-        width: 300px;
-        margin: 0 auto;
-        margin-top: 70px;
-    }
+@media #{$desktop} {
+    .logo {}
 
     .menu {
         display: flex;
         justify-content: space-between;
-        width: 400px;
-        margin: 0 auto;
-        font-size: $fontSizeTitle;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        color: getColor("secondary");
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        max-width: 900px;
+        width: 100%;
+
 
         &__item {
-            transition: $transTransform, $transFontWeight;
+            transition: transform 0.3s ease-in-out;
 
             &:hover,
             &:focus {
@@ -79,7 +65,7 @@ hr {
         color: #9e9e9e;
     }
 
-    .menu-toggle {
+    .menu-open {
         display: none;
     }
 }
