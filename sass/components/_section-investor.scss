@@ -53,6 +53,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        overflow: hidden;
     }
 
     &__services-title {
@@ -74,7 +75,7 @@
     &__list {
         position: absolute;
         width: 100%;
-        transform: translateY(-100%);
+        transform: translateY(100%);
         opacity: 0;
         transition: transform 1.5s ease-in-out;
     }

@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const investorSection = document.querySelector('#investor');
   const investorList = document.querySelector('.investor__list');
-  const headerHeight = 150;
+  const headerHeight = 110;
   const margin = 150;
 
   function handleScroll() {
@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sectionBottom = investorSection.getBoundingClientRect().bottom;
     const viewportHeight = window.innerHeight;
 
-    if (
-      sectionTop <= viewportHeight / 3 + headerHeight &&
-      sectionBottom > headerHeight
-    ) {
+    if (sectionTop <= headerHeight && sectionBottom > headerHeight) {
       investorList.classList.add('visible');
     }
 
