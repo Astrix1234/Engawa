@@ -1,23 +1,21 @@
 $colors: (
-  'primary': #212121,
-  'secondary': #767676,
-  'third': #f5f4fa,
-  'forth': #515151,
-
-  'accentLight': #ffffff,
-  'accentDark': #000000,
+  'primary': #110E0D,
+  'secondary': #F9F6F5,
+  'third': #9C760C,
+  'forth': #D5D5D5,
 );
 
 @function getColor($key) {
   @return map-get($colors, $key);
 }
 
-$fontFamilyMain: 'Lato', sans-serif;
+
 
 $fontSizeBigger: 20px;
-$fontSizeBig: 16px;
+$fontSizeBig: 18px;
+$fontSizeNormal: 16px;
 $fontSizeSmall: 14px;
-$fontSizeTitle: 23px;
+$fontSizeTitle: 42px;
 
 
 

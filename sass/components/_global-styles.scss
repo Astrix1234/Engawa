@@ -1,7 +1,9 @@
-.body {
-  font-family: $fontFamilyMain;
+body {
+  font-family: "DM Sans", system-ui;
   color: getColor('primary');
-  font-size: $fontSizeBig;
+  font-size: $fontSizeNormal;
+  background-color: getColor('secondary');
+  overflow-x: hidden;
 }
 
 .container {
