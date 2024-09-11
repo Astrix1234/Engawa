@@ -41,6 +41,21 @@ header {
         font-size: 36px;
         font-weight: 800;
         letter-spacing: 2.16px;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: getColor("third");
+        }
+
+        &.active {
+            color: getColor("third");
+
+            &:hover,
+            &:focus {
+                cursor: context-menu;
+            }
+        }
     }
 
     .menu {
@@ -52,7 +67,7 @@ header {
         &__item {
             font-size: $fontSizeBig;
             color: getColor('primary');
-            font-weight: normal;
+            font-weight: 500;
             transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 
             &:hover,
@@ -62,7 +77,6 @@ header {
 
             &.active {
                 color: getColor("third");
-                font-weight: 600;
 
                 &:hover a,
                 &:focus a {
