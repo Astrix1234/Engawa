@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const investorSection = document.querySelector('#manager');
   const investorList = document.querySelector('.manager__list');
-  const headerHeight = 110;
+  const headerHeight = 150;
   const margin = 150;
 
   function handleScroll() {

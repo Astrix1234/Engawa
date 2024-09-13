@@ -1,0 +1,143 @@
+#design-office {
+    padding-top: 150px;
+    padding-bottom: 500px;
+}
+
+
+
+.design-title {
+    font-size: $fontSizeTitle;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 2.16px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.design-subtitle {
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+
+
+.design {
+    width: 100%;
+    background-color: getColor('forth');
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    background-image:
+        linear-gradient(rgba(213, 213, 213, 0.85), rgba(213, 213, 213, 0.85)),
+        url('../images/ruczaj/170003.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 40px;
+
+    &__title {
+        font-size: $fontSizeBigger;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__text-left {
+        flex-grow: 1;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-bottom: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.8s ease-out;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid getColor('third');
+            }
+
+            &:not(:first-child) {
+                padding-top: 20px;
+            }
+        }
+    }
+
+
+
+    &__text-center {
+        max-width: 300px;
+        width: 100%;
+        padding: 0 40px;
+        border-right: 1px solid getColor('third');
+        border-left: 1px solid getColor('third');
+    }
+
+    &__text-right {
+        flex-grow: 1;
+
+        & div {
+            transform: translateX(100%);
+            transition: transform 0.8s ease-out;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid getColor('third');
+                padding-bottom: 20px;
+            }
+
+            &:not(:first-child) {
+                padding-top: 20px;
+            }
+        }
+    }
+
+
+
+    &__text-title-center {
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__text-title-right {
+        padding-left: 40px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        width: 100%;
+    }
+
+    &__text-title-left {
+        padding-right: 40px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    &__text-list-left {
+        max-width: 300px;
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    &__text-list-right {
+        max-width: 300px;
+        width: 100%;
+        padding-left: 40px;
+    }
+}
+
+.design__text-left div.slide-in-left {
+    transform: translateX(0);
+}
+
+.design__text-right div.slide-in-right {
+    transform: translateX(0);
+}
