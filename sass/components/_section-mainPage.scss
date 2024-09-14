@@ -1,5 +1,5 @@
 #main-page {
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .main-title {
@@ -7,14 +7,43 @@
     font-size: 40px;
     font-style: normal;
     font-weight: 900;
+    margin-bottom: 25px;
 }
 
+.awards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    list-style: none;
+    position: relative;
 
+    & img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+
+        &:hover {
+            transform: scale(1.4);
+            z-index: 15;
+        }
+    }
+
+    &__item {
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
 
 .carousel {
     width: 100%;
     position: relative;
-    margin: 140px 0 120px 0;
+    margin: 101px 0 90px 0;
 
     &__track {
         display: flex;
@@ -39,6 +68,28 @@
 .carousel__item.swiper-slide-active {
     transform: scale(1.6);
     z-index: 10;
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+.carousel::before {
+    left: 0;
+
+}
+
+.carousel::after {
+    right: 0;
+    transform: rotate(180deg);
 }
 
 .main-description {
@@ -68,17 +119,12 @@
         align-items: center;
         width: 100%;
         max-width: 210px;
-        height: 110px;
+        height: 90px;
         position: relative;
         overflow: hidden;
         border-left: 1px solid getColor("third");
 
-        &:hover,
-        &:focus {
-            & div {
-                transform: translateX(0);
-            }
-        }
+
 
         & p {
             width: 100%;
@@ -87,15 +133,7 @@
             font-size: $fontSizeBig;
         }
 
-        & div {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: getColor("third");
-            z-index: 15;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
+
     }
 
     &__item:last-child {

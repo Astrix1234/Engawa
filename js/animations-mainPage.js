@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapperClass: 'carousel__track',
   });
   swiper.el.addEventListener('click', () => {
-    swiper.autoplay.start(); // Wznawia autoplay po kliknięciu
+    swiper.autoplay.start();
   });
 });
