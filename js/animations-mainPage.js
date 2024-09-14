@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.carousel', {
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 20,
+    spaceBetween: 4,
     speed: 3000,
     centeredSlides: true,
     autoplay: {
