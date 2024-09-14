@@ -1,45 +1,41 @@
 #manager {
-    padding-top: 150px;
-    padding-bottom: 780px;
-    position: relative;
+    padding-top: 80px;
 }
 
 .manager-container {
-    padding: 0 44px;
+    padding: 0 20px;
 }
 
 .manager-title {
-    font-size: $fontSizeTitle;
+    font-size: 24px;
     line-height: 1.3;
-    max-width: 220px;
+    max-width: 110px;
     width: 100%;
     font-weight: 600;
     letter-spacing: 2.16px;
     text-align: right;
     margin-left: auto;
+    margin-bottom: 40px;
 }
 
 .manager {
-    position: absolute;
     width: 100%;
     background-color: getColor('forth');
-    left: -50%;
-    top: 150px;
-    transform: translateX(376px);
     display: flex;
-    line-height: 1.5;
+    flex-direction: column;
+    line-height: 1.3;
     letter-spacing: 0.32px;
+    margin: 0 auto;
 
 
     &__descriptions {
-        border-left: 1px solid getColor('third');
-        max-width: 460px;
+        max-width: 390px;
         width: 100%;
-        padding-bottom: 140px;
+        margin: 0 auto;
     }
 
     &__text {
-        padding: 40px 50px 40px 60px;
+        padding: 25px 20px 25px 20px;
 
         &:not(:last-child) {
             border-bottom: 1px solid getColor('third');
@@ -47,7 +43,7 @@
     }
 
     &__services {
-        padding-top: 40px;
+        padding-top: 30px;
         width: 100%;
         background-image:
             linear-gradient(rgba(213, 213, 213, 0.85), rgba(213, 213, 213, 0.85)),
@@ -59,32 +55,30 @@
     }
 
     &__services-title {
-        font-size: $fontSizeBigger;
+        font-size: $fontSizeNormal;
         font-weight: 600;
         line-height: 1.5;
         letter-spacing: 0.4px;
-        max-width: 590px;
+        max-width: 390px;
         width: 100%;
-        padding-right: 60px;
-        margin-bottom: 27px;
-        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
     }
 
     &__list-container {
-        position: relative;
         width: 100%;
     }
 
     &__list {
-        position: absolute;
         width: 100%;
-        transform: translateY(100%);
         opacity: 0;
-        transition: transform 1.5s ease-in-out;
+        transition: opacity 1.5s ease-in-out;
     }
 
     &__list.visible {
-        transform: translateY(0);
         opacity: 1;
     }
 
@@ -97,11 +91,106 @@
     }
 
     &__item p {
-        padding-right: 60px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        max-width: 590px;
+        padding: 8px 20px;
+        max-width: 390px;
         width: 100%;
-        margin-left: auto;
+        margin: 0 auto;
+    }
+}
+
+@media #{$desktop} {
+    #manager {
+        padding-top: 150px;
+        padding-bottom: 780px;
+        position: relative;
+    }
+
+    .manager-container {
+        padding: 0 44px;
+    }
+
+    .manager-title {
+        font-size: $fontSizeTitle;
+        max-width: 220px;
+        margin-bottom: 0;
+    }
+
+    .manager {
+        position: absolute;
+        width: 100%;
+        background-color: getColor('forth');
+        left: -50%;
+        top: 150px;
+        transform: translateX(376px);
+        flex-direction: row;
+        line-height: 1.5;
+        margin: 0;
+
+        &__descriptions {
+            border-left: 1px solid getColor('third');
+            max-width: 460px;
+            width: 100%;
+            padding-bottom: 140px;
+            margin: 0;
+        }
+
+        &__text {
+            padding: 40px 50px 40px 60px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid getColor('third');
+            }
+        }
+
+        &__services {
+            padding-top: 40px;
+            width: 100%;
+            background-image:
+                linear-gradient(rgba(213, 213, 213, 0.85), rgba(213, 213, 213, 0.85)),
+                url('../images/jozefinska-galeria/0248.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            height: auto;
+        }
+
+        &__services-title {
+            font-size: $fontSizeBigger;
+            max-width: 590px;
+            padding-right: 60px;
+            margin: 0;
+            margin-bottom: 27px;
+            margin-left: auto;
+            padding-left: 0;
+        }
+
+        &__list-container {
+            position: relative;
+        }
+
+        &__list {
+            position: absolute;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        &__list.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        &__item:not(:last-child) {
+            border-bottom: 1px solid getColor('third');
+        }
+
+        &__item p {
+            padding: 8px 0;
+            padding-right: 60px;
+            max-width: 590px;
+            margin: 0;
+            margin-left: auto;
+        }
     }
 }
