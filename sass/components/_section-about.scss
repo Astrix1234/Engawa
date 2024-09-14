@@ -1,39 +1,80 @@
 #about {
-    padding-top: 200px;
+    padding-top: 80px;
 }
 
 .about-title {
-    font-size: $fontSizeTitle;
+    font-size: 24px;
     line-height: 1.3;
     font-weight: 600;
     letter-spacing: 2.16px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
-
+.about-container {
+    padding: 0 20px;
+}
 
 .about {
     width: 100%;
     background-color: getColor('forth');
-    padding: 40px 0;
+    padding-top: 10px;
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px 0;
-        line-height: 1.5;
+        grid-template-columns: repeat(1, 1fr);
+        line-height: 1.3;
         letter-spacing: 0.32px;
         list-style: none;
     }
 
     &__item {
-        padding: 8px 44px 0 44px;
-        height: 164px;
+        padding: 20px 0;
 
     }
 
-    &__item:not(:nth-child(1)):not(:nth-child(4)) {
-        border-left: 1px solid getColor('third');
+    &__item:not(:last-child) {
+        border-bottom: 1px solid getColor('third');
+    }
+}
+
+@media #{$desktop} {
+    #about {
+        padding-top: 200px;
+    }
+
+    .about-title {
+        font-size: $fontSizeTitle;
+
+        margin-bottom: 100px;
+    }
+
+    .about-container {
+        padding: 0;
+    }
+
+    .about {
+        padding: 40px 0;
+
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 0;
+            line-height: 1.5;
+
+        }
+
+        &__item {
+            padding: 8px 44px 0 44px;
+            height: 164px;
+
+        }
+
+        &__item:not(:nth-child(1)):not(:nth-child(4)) {
+            border-left: 1px solid getColor('third');
+        }
+
+        &__item:not(:last-child) {
+            border-bottom: none;
+        }
     }
 }
