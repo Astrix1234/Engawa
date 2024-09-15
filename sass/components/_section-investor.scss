@@ -114,9 +114,6 @@
             width: 100%;
             margin-left: auto;
 
-            &:not(:last-child) {
-                border-bottom: 1px solid getColor('third');
-            }
         }
 
         &__services-title {
