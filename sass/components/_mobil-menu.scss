@@ -4,12 +4,12 @@
   left: 0;
   z-index: 600;
   width: 100vw;
-  height: 50vh;
-  background-color: getColor("third");
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   transform: translateX(100%);
   visibility: hidden;
   opacity: 0;
-  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
   &__menu-close {
     position: absolute;
@@ -19,7 +19,35 @@
     border: none;
 
     &-icon {
-      fill: getColor("forth");
+      fill: getColor("primary");
+    }
+  }
+
+  &__container {
+    width: 100%;
+    background: getColor("forth");
+    padding: 10px 20px 20px 20px;
+  }
+
+  &__logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2.16px;
+    transition: color 0.3s ease-in-out;
+
+
+    &:hover,
+    &:focus {
+      color: getColor("third");
+    }
+
+    &.active {
+      color: getColor("third");
+
+      &:hover,
+      &:focus {
+        cursor: context-menu;
+      }
     }
   }
 }
@@ -27,18 +55,30 @@
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 15px;
   height: 100%;
-  align-items: center;
   list-style: none;
+  margin-top: 60px;
 
   &__link {
-    color: getColor("secondary");
+    color: getColor("primary");
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
 
-
-    &--accent {
-      font-weight: 600;
+    &:hover,
+    &:focus {
+      color: getColor("third");
     }
+
+    &.active {
+      color: getColor("third");
+
+      &:hover a,
+      &:focus a {
+        cursor: context-menu;
+      }
+    }
+
   }
 }
 

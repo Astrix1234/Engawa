@@ -71,7 +71,7 @@ header {
             font-size: $fontSizeSmall;
             color: getColor('primary');
             font-weight: 500;
-            transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
 
             &:hover,
             &:focus {
