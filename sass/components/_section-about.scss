@@ -16,6 +16,7 @@
 }
 
 .about {
+    font-size: $fontSizeSmall;
     width: 100%;
     background-color: getColor('forth');
     padding-top: 10px;
@@ -54,6 +55,7 @@
 
     .about {
         padding: 40px 0;
+        font-size: $fontSizeNormal;
 
         &__list {
             grid-template-columns: repeat(3, 1fr);
