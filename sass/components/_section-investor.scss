@@ -94,6 +94,65 @@
     }
 }
 
+@media #{$tablet} {
+    #investor {
+        padding-top: 120px;
+    }
+
+    .investor {
+        flex-direction: row;
+
+        &__descriptions {
+            border-right: 1px solid getColor('third');
+            max-width: 50%;
+            margin: 0;
+        }
+
+        &__text {
+            padding: 30px 30px 30px 20px;
+            max-width: 385px;
+            width: 100%;
+            margin-left: auto;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid getColor('third');
+            }
+        }
+
+        &__services-title {
+            margin: 0;
+            max-width: 385px;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 20px;
+            margin-bottom: 18px;
+        }
+
+        &__list-container {
+            position: relative;
+        }
+
+        &__list {
+            position: absolute;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        &__list.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        &__item p {
+            padding-right: 20px;
+            padding-left: 30px;
+            max-width: 385px;
+            margin: 0;
+        }
+    }
+}
+
 @media #{$desktop} {
     #investor {
         padding-top: 150px;
@@ -124,17 +183,14 @@
 
 
         &__descriptions {
-            border-right: 1px solid getColor('third');
             max-width: 700px;
-            margin: 0;
         }
 
         &__text {
             padding: 40px 50px 40px 60px;
-
-            &:not(:last-child) {
-                border-bottom: 1px solid getColor('third');
-            }
+            max-width: 100%;
+            width: 100%;
+            margin-left: 0;
         }
 
         &__services {
@@ -143,7 +199,6 @@
 
         &__services-title {
             font-size: $fontSizeBigger;
-            margin: 0;
             max-width: 360px;
             width: 100%;
             padding-left: 50px;
@@ -151,31 +206,13 @@
             margin-bottom: 27px;
         }
 
-        &__list-container {
-            position: relative;
-        }
 
-        &__list {
-            position: absolute;
-            transform: translateY(100%);
-            opacity: 0;
-            transition: transform 1.5s ease-in-out;
-        }
 
-        &__list.visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        &__item:not(:last-child) {
-            border-bottom: 1px solid getColor('third');
-        }
 
         &__item p {
             padding-right: 0;
             padding-left: 50px;
             max-width: 360px;
-            margin: 0;
         }
     }
 }
