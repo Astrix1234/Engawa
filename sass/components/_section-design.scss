@@ -89,34 +89,26 @@
         font-weight: 600;
         margin-bottom: 6px;
     }
+
+    &__text-item {
+        margin-left: 14px;
+    }
 }
 
-
-
-@media #{$desktop} {
+@media #{$tablet} {
     #design-office {
-        padding-top: 150px;
-    }
-
-
-    .design-title {
-        font-size: $fontSizeTitle;
+        padding-top: 120px;
     }
 
     .design-subtitle {
-        margin: 40px 0 60px 0;
-        max-width: 100%;
-        padding: 0;
+        max-width: 768px;
     }
 
-
-
     .design {
-        font-size: $fontSizeNormal;
+
         padding-top: 40px;
 
         &__title {
-            font-size: $fontSizeBigger;
             font-weight: 600;
             line-height: 1.5;
             letter-spacing: 0.4px;
@@ -158,9 +150,9 @@
         }
 
         &__text-center {
-            max-width: 300px;
+            max-width: 250px;
             width: 100%;
-            padding: 0 40px;
+            padding: 0 30px;
             border-right: 1px solid getColor('third');
             border-left: 1px solid getColor('third');
         }
@@ -186,27 +178,27 @@
 
 
         &__text-title-right {
-            max-width: 300px;
-            padding-left: 40px;
+            max-width: 235px;
+            padding-left: 30px;
             width: 100%;
         }
 
         &__text-title-left {
-            padding-right: 40px;
-            max-width: 300px;
+            padding-right: 30px;
+            max-width: 235px;
             width: 100%;
         }
 
         &__text-list-left {
-            max-width: 300px;
+            max-width: 235px;
             width: 100%;
-            padding-right: 40px;
+            padding-right: 30px;
         }
 
         &__text-list-right {
-            max-width: 300px;
+            max-width: 235px;
             width: 100%;
-            padding-left: 40px;
+            padding-left: 30px;
         }
     }
 
@@ -217,4 +209,59 @@
     .design__text-right div.slide-in-right {
         transform: translateX(0);
     }
+}
+
+@media #{$desktop} {
+    #design-office {
+        padding-top: 150px;
+    }
+
+
+    .design-title {
+        font-size: $fontSizeTitle;
+    }
+
+    .design-subtitle {
+        margin: 40px 0 60px 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+
+
+    .design {
+        font-size: $fontSizeNormal;
+
+        &__title {
+            font-size: $fontSizeBigger;
+        }
+
+
+        &__text-center {
+            max-width: 300px;
+            padding: 0 40px;
+        }
+
+
+        &__text-title-right {
+            max-width: 300px;
+            padding-left: 40px;
+        }
+
+        &__text-title-left {
+            padding-right: 40px;
+            max-width: 300px;
+        }
+
+        &__text-list-left {
+            max-width: 300px;
+            padding-right: 40px;
+        }
+
+        &__text-list-right {
+            max-width: 300px;
+            padding-left: 40px;
+        }
+    }
+
 }

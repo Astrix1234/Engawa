@@ -86,25 +86,25 @@
     padding-top: 10px;
 }
 
-@media #{$desktop} {
+@media #{$tablet} {
     #contact {
-        padding-top: 150px;
+        padding-top: 120px;
         position: relative;
     }
 
     .footer-container {
-        padding-right: 355px;
+        padding-right: 100px;
         flex-direction: row;
         justify-content: flex-end;
     }
 
     .picture {
         position: absolute;
-        width: 50vw;
+        width: 50%;
         height: 720px;
         background-color: getColor('forth');
         right: 50%;
-        top: 150px;
+        top: 120px;
         background-image:
             url('../images/zacisze/0170.jpg');
         background-repeat: no-repeat;
@@ -123,13 +123,12 @@
 
 
         &__title {
-            font-size: $fontSizeTitle;
             margin-bottom: 32px;
             margin-top: 0;
         }
 
         &__description {
-            font-size: $fontSizeBig;
+            font-size: $fontSizeNormal;
             line-height: 1.5;
             letter-spacing: 0.32px;
         }
@@ -139,13 +138,42 @@
         }
 
         &__socialmedia {
-
             margin-top: 80px;
-            transform: scale(1);
         }
     }
 
     .copyrights {
-        height: 80px;
+        height: 140px;
+    }
+
+}
+
+@media #{$desktop} {
+    #contact {
+        padding-top: 150px;
+    }
+
+    .footer-container {
+        padding-right: 355px;
+    }
+
+    .picture {
+        top: 150px;
+    }
+
+    .contact {
+
+        &__title {
+            font-size: $fontSizeTitle;
+        }
+
+        &__description {
+            font-size: $fontSizeBig;
+        }
+
+
+        &__socialmedia {
+            transform: scale(1);
+        }
     }
 }
