@@ -5,7 +5,7 @@
   z-index: 600;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   transform: translateX(100%);
   visibility: hidden;
   opacity: 0;
@@ -62,7 +62,8 @@
 
   &__link {
     color: getColor("primary");
-    font-weight: 500;
+    font-weight: 600;
+    font-size: $fontSizeBig;
     transition: color 0.3s ease-in-out;
 
     &:hover,
