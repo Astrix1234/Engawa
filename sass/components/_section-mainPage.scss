@@ -8,6 +8,7 @@
     font-weight: 900;
     margin-bottom: 25px;
     max-width: 280px;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 25px;
@@ -53,7 +54,6 @@
 
 .carousel {
     width: 100%;
-    position: relative;
     margin: 65px 0 60px 0;
 
     &__track {
@@ -107,21 +107,19 @@
     padding: 0 20px;
 }
 
-@media #{$desktop} {
+@media #{$tablet} {
     #main-page {
         padding-top: 120px;
     }
 
     .main-title {
-        font-size: 40px;
-        font-weight: 900;
+        font-size: 35px;
         margin-bottom: 25px;
-        max-width: 100%;
+        max-width: 500px;
     }
 
     .main-subtitle {
-
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 25px;
     }
 
@@ -134,6 +132,47 @@
     }
 
     .carousel {
+        margin: 101px 0 90px 0;
+
+
+        &__item {
+            width: 240px;
+            height: 270px;
+
+            & p {
+                top: 25px;
+                left: 25px;
+                font-weight: 700;
+                font-size: $fontSizeNormal;
+            }
+        }
+    }
+
+    .carousel__item.swiper-slide-active {
+        transform: scale(1.6);
+
+
+    }
+
+
+    .main-description {
+        line-height: 1.5;
+    }
+}
+
+@media #{$desktop} {
+
+    .main-title {
+        font-size: 40px;
+        max-width: 100%;
+    }
+
+    .main-subtitle {
+        font-size: 28px;
+    }
+
+    .carousel {
+        position: relative;
         margin: 101px 0 90px 0;
 
 
