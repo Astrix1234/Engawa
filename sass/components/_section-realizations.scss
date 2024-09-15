@@ -63,6 +63,25 @@
     }
 }
 
+@media #{$tablet} {
+    #realizations {
+        padding-top: 120px;
+    }
+
+    .realizations {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+
+        &__item img {
+            height: 180px;
+        }
+
+        &__item div {
+            font-size: $fontSizeNormal;
+        }
+    }
+}
+
 @media #{$desktop} {
     #realizations {
         padding-top: 150px;

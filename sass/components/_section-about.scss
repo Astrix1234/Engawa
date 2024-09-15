@@ -39,6 +39,12 @@
     }
 }
 
+@media #{$tablet} {
+    #about {
+        padding-top: 120px;
+    }
+}
+
 @media #{$desktop} {
     #about {
         padding-top: 200px;
