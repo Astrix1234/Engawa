@@ -121,6 +121,10 @@ body #main-page {
         font-size: 35px;
         margin-bottom: 25px;
         max-width: 500px;
+
+        &--english {
+            max-width: 450px;
+        }
     }
 
     .main-subtitle {
