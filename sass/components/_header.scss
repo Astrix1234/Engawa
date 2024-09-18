@@ -36,6 +36,20 @@ header {
     }
 }
 
+.language {
+    &--active {
+        color: getColor("third");
+        font-weight: 600;
+    }
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+
 .menu {
     display: none;
 }
@@ -59,6 +73,11 @@ header {
         gap: 15px;
     }
 
+    .language {
+        position: fixed;
+        right: 20px;
+        top: 10px;
+    }
 
     .menu {
         display: flex;

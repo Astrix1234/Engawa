@@ -182,11 +182,14 @@
         margin: 0;
 
         &__descriptions {
-
             max-width: 460px;
             width: 100%;
             padding-bottom: 140px;
             margin: 0;
+
+            &--english {
+                padding-bottom: 185px;
+            }
         }
 
         &__text {
