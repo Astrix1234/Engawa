@@ -37,11 +37,32 @@
     &__item:not(:last-child) {
         border-bottom: 1px solid getColor('third');
     }
+
+    &__picture {
+        height: 150px;
+        width: 150px;
+        margin-right: 30px;
+    }
+
+    &__picture img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__picture-container {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media #{$tablet} {
     #about {
         padding-top: 120px;
+
+        &__picture {
+            margin-right: 40px;
+        }
     }
 
 }
@@ -84,5 +105,7 @@
         &__item:not(:last-child) {
             border-bottom: none;
         }
+
+
     }
 }
