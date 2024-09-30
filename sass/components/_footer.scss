@@ -62,17 +62,17 @@
         transform-origin: top left;
     }
 
-    &__instagram {
+    &__link-icon {
         width: 36px;
         height: 36px;
 
-        &:hover .contact__instagram-icon,
-        &:focus .contact__instagram-icon {
+        &:hover .contact__icon,
+        &:focus .contact__icon {
             fill: getColor('third');
         }
     }
 
-    &__instagram-icon {
+    &__icon {
         fill: getColor('primary');
         transition: fill 0.3s ease-in-out;
     }
