@@ -16,6 +16,11 @@ body #main-page {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 25px;
+
+    & span {
+        font-weight: 700;
+        font-size: $fontSizeSmall;
+    }
 }
 
 .main-subtitle {
@@ -114,7 +119,7 @@ body #main-page {
 
 @media #{$tablet} {
     #main-page {
-        padding-top: 120px;
+        padding-top: 100px;
     }
 
     .main-title {
@@ -124,6 +129,10 @@ body #main-page {
 
         &--english {
             max-width: 450px;
+        }
+
+        & span {
+            font-size: $fontSizeBig;
         }
     }
 
@@ -170,10 +179,17 @@ body #main-page {
 }
 
 @media #{$desktop} {
+    #main-page {
+        padding-top: 110px;
+    }
 
     .main-title {
         font-size: 40px;
         max-width: 100%;
+
+        & span {
+            font-size: 24px;
+        }
     }
 
     .main-subtitle {
