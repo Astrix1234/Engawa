@@ -17,7 +17,7 @@ body #main-page {
     margin: 0 auto;
     margin-bottom: 25px;
 
-    & span {
+    &__text {
         font-weight: 700;
         font-size: $fontSizeSmall;
     }
