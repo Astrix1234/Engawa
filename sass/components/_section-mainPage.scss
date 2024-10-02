@@ -10,14 +10,12 @@ body #main-page {
     text-align: center;
     font-size: $fontSizeBigger;
     font-weight: 900;
-    margin-bottom: 25px;
     max-width: 280px;
     width: 100%;
-    text-align: center;
     margin: 0 auto;
     margin-bottom: 25px;
 
-    &__text {
+    & .main-title__text {
         font-weight: 700;
         font-size: $fontSizeSmall;
     }
@@ -131,7 +129,7 @@ body #main-page {
             max-width: 450px;
         }
 
-        & span {
+        & .main-title__text {
             font-size: $fontSizeBig;
         }
     }
@@ -187,7 +185,7 @@ body #main-page {
         font-size: 40px;
         max-width: 100%;
 
-        & span {
+        & .main-title__text {
             font-size: 24px;
         }
     }
