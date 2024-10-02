@@ -16,8 +16,8 @@ body #main-page {
     margin-bottom: 25px;
 
     & .main-title__text {
-        font-weight: 700;
-        font-size: $fontSizeSmall;
+        font-weight: 500;
+        font-size: 14px;
     }
 }
 
@@ -132,6 +132,7 @@ body #main-page {
 
         & .main-title__text {
             font-size: $fontSizeBig;
+            font-weight: 700;
         }
     }
 
