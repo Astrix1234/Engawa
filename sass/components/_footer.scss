@@ -76,6 +76,20 @@
         fill: getColor('primary');
         transition: fill 0.3s ease-in-out;
     }
+
+    &__btn-privacy {
+        background-color: transparent;
+        margin-top: 20px;
+        border: none;
+        font-size: $fontSizeSmall;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: getColor("third");
+        }
+    }
 }
 
 .copyrights {
@@ -140,6 +154,11 @@
         &__socialmedia {
             margin-top: 80px;
         }
+
+        &__btn-privacy {
+            margin-top: 80px;
+            font-size: $fontSizeNormal;
+        }
     }
 
     .copyrights {
@@ -174,6 +193,10 @@
 
         &__socialmedia {
             transform: scale(1);
+        }
+
+        &__btn-privacy {
+            margin-top: 30px;
         }
     }
 }

@@ -1,0 +1,144 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: not-allowed;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.privacy {
+    position: relative;
+    background-color: getColor('secondary');
+    cursor: auto;
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+
+    &__btn-close {
+        position: fixed;
+        z-index: 10;
+        top: 20px;
+        right: 20px;
+        border: none;
+        background-color: getColor('secondary');
+        cursor: pointer;
+    }
+
+    &__close-icon {
+        fill: getColor("primary");
+        transition: fill 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            fill: getColor("third")
+        }
+    }
+
+    & li {
+        margin-left: 14px;
+        font-size: $fontSizeSmall;
+    }
+
+    & p {
+        font-size: $fontSizeSmall;
+    }
+
+    & h3 {
+
+        font-size: $fontSizeNormal;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    & h2 {
+        font-size: $fontSizeBig;
+        margin-bottom: 20px;
+    }
+
+    & a {
+        text-decoration: underline;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: getColor("third");
+        }
+    }
+}
+
+@media #{$tablet} {
+    .privacy {
+        padding: 30px;
+        height: 80%;
+        width: 80%;
+
+        &__btn-close {
+            position: absolute;
+        }
+
+
+
+
+        & a {
+            text-decoration: underline;
+            transition: color 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: getColor("third");
+            }
+        }
+
+    }
+}
+
+@media #{$desktop} {
+    .privacy {
+        height: 70%;
+        width: 70%;
+
+        &__btn-close {
+            top: 30px;
+            right: 30px;
+        }
+
+        & li {
+            font-size: $fontSizeNormal;
+        }
+
+        & p {
+            font-size: $fontSizeNormal;
+        }
+
+        & h3 {
+            font-size: $fontSizeBig;
+        }
+
+        & h2 {
+            font-size: $fontSizeBigger;
+        }
+    }
+}
